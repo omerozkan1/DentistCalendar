@@ -19,8 +19,15 @@ using DentistCalendar;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\Views\_ViewImports.cshtml"
+using DentistCalendar.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b1079278a60b32d066d3d39218dd5d9b8626b072", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"71332de244a4adad55165bc5a286c630534707e1", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -834,3 +834,4 @@ C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\o
 C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\DentistCalendar.dll
 C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\DentistCalendar.pdb
 C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\DentistCalendar.genruntimeconfig.cache
+C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
