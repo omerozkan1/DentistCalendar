@@ -4,9 +4,11 @@
 
 
 @section Styles {
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href='/lib/fullcalendar/core/main.css' rel='stylesheet' />
     <link href='/lib/fullcalendar/daygrid/main.css' rel='stylesheet' />
     <link href="~/lib/fullcalendar/timegrid/main.css" rel="stylesheet" />
+    <link href="~/lib/fullcalendar/bootstrap/main.css" />
 }
 
 
@@ -21,19 +23,39 @@
     <script src='~/lib/fullcalendar/core/main.js'></script>
     <script src="/lib/fullcalendar/daygrid/main.js"></script>
     <script src="~/lib/fullcalendar/timegrid/main.js"></script>
+    <script src="~/lib/fullcalendar/bootstrap/main.js"></script>
     <script src="~/lib/fullcalendar/core/locales/tr.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['dayGrid', 'timeGrid'],
+                plugins: ['dayGrid', 'timeGrid', 'bootstrap'],
+                themeSystem: 'bootstrap',
+                bootstrapFontAwesome: {
+                    dayGridMonth: 'calendar',
+                    prev: 'fa-chevron-circle-left',
+                    next:'fa-chevron-circle-right'
+                },
                 locale: 'tr',
                 header: {
                     left: 'prev, next, today, getDate',
                     center: 'title',
                     right: 'dayGridMonth, timeGridWeek, timeGridDay, timeGridForFourDay'
                 },
+
+                footer: {
+                    left: 'prevYear',
+                    right: 'nextYear'
+                },
+                handleWindowResize: true,
+                windowResizeDelay: 1000,
+                windowResize: function (view) {
+                    alert('Takvim yeniden boyutlandırıldı.');
+                },
+                //contentHeight: 650,
+                //aspectRatio: 1.2,
                 defaultView: 'dayGridMonth',
                 weekends: true,
                 allDaySlot: false,
@@ -71,13 +93,8 @@
                 //    month: 'Ay ve ay',
                 //    week: 'Haftalr haf',
                 //    day : 'Gün güb'
-                //}
-                ,
-                footer: {
-                    left: 'getDate',
-                    center: 'title',
-                    right: 'timeGridForFourDay'
-                }
+                //}                
+               
             });
 
             calendar.render();
