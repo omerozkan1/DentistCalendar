@@ -17,7 +17,7 @@ namespace DentistCalendar.Models
         public string Surname { get; set; }
 
         [Required(ErrorMessage = "Parola boş geçilemez.")]
-        [Display(Name = "Kullanıcı Adınız: ")]
+        [Display(Name = "Parolanız: ")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
@@ -27,10 +27,11 @@ namespace DentistCalendar.Models
         public string Email { get; set; }
 
 
-        [Required(ErrorMessage = "Renk boş geçilemez.")]
-        [Display(Name = "Renk: ")]
+        [Required(ErrorMessage = "Randevu rengi boş geçilemez.")]
+        [Display(Name = "Randevu Rengi: ")]
         public string Color { get; set; }
 
+        [Display(Name = "Doktorum ")]
         public bool IsDentist { get; set; }
     }
 }
