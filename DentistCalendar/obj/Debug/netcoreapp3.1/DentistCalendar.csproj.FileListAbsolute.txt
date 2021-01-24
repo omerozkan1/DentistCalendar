@@ -838,3 +838,6 @@ C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\o
 C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\DentistCalendar.csprojAssemblyReference.cache
 C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Dentist.cshtml.g.cs
+C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Secretary.cshtml.g.cs
+C:\Users\ÖmerÖzkan\Downloads\DentistCalendar\DentistCalendar\DentistCalendar\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

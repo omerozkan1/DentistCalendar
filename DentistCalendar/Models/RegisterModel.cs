@@ -26,8 +26,6 @@ namespace DentistCalendar.Models
         [EmailAddress(ErrorMessage = "Lütfen email bilginizi kontrol ediniz.")]
         public string Email { get; set; }
 
-
-        [Required(ErrorMessage = "Randevu rengi boş geçilemez.")]
         [Display(Name = "Randevu Rengi: ")]
         public string Color { get; set; }
 
