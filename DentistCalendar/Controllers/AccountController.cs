@@ -100,7 +100,7 @@ namespace DentistCalendar.Controllers
             return RedirectToAction("Login");
         }
 
-        public IActionResult Denied()
+        public IActionResult AccessDenied()
         {
             return View();
         }

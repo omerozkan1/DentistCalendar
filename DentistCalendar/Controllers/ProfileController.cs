@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using DentistCalendar.Data.Entity;
 using DentistCalendar.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DentistCalendar.Controllers
 {
+    [Authorize(Roles = "Secretary, Dentist")]
     public class ProfileController : Controller
     {
         private UserManager<AppUser> _userManager;
@@ -43,8 +42,18 @@ namespace DentistCalendar.Controllers
             }
             else
             {
-
-                return View("Dentist");
+                var dentists = _userManager.Users.Where(x => x.IsDentist);
+                DentistModel model = new DentistModel()
+                {
+                    User = user,
+                    Dentists = dentists,
+                    DentistsSelectList = dentists.Select(n => new SelectListItem
+                    {
+                        Value = n.Id,
+                        Text = $"Dt. {n.Name} {n.Surname}"
+                    }).ToList()
+                };
+                return View("Dentist", model);
             }
 
         }
@@ -54,6 +63,7 @@ namespace DentistCalendar.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Dentist")]
         public IActionResult Dentist()
         {
             return View();
