@@ -2,7 +2,7 @@
 
 namespace DentistCalendar.Models
 {
-    public class RegisterModel
+    public class RegisterViewModel
     {
         [Required(ErrorMessage = "Kullanıcı adı boş geçilemez.")]
         [Display(Name="Kullanıcı Adınız: ")]

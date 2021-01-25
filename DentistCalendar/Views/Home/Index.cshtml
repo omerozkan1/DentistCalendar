@@ -4,7 +4,7 @@
 
 
 @section Styles {
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href='/lib/fullcalendar/core/main.css' rel='stylesheet' />
     <link href='/lib/fullcalendar/daygrid/main.css' rel='stylesheet' />
     <link href="~/lib/fullcalendar/timegrid/main.css" rel="stylesheet" />
@@ -17,18 +17,18 @@
     <div class="col-md-2">
         <div id="otherEvents">
             <p><strong>Sürüklenebilir Etkinlikler</strong></p>
-            <div class="fc-event" id="isValid">1.Etkinlik</div><br />
-            <div class="fc-event" id="isNotValid">2.Etkinlik</div><br />
+            <div class="fc-event" id="isValid">1. Etkinlik</div><br />
+            <div class="fc-event" id="isNotValid">2. Etkinlik</div><br />
         </div>
     </div>
     <div class="col-md-10">
-
         <div id="calendar">
 
         </div>
-
     </div>
 </div>
+
+
 
 
 
@@ -57,30 +57,28 @@
                     };
                 }
             });
-            
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['interaction', 'dayGrid', 'timeGrid', 'list', 'bootstrap'],
+                plugins: ['interaction','dayGrid', 'timeGrid', 'list', 'bootstrap'],
                 themeSystem: 'bootstrap',
                 bootstrapFontAwesome: {
                     dayGridMonth: 'calendar',
                     prev: 'fa-chevron-circle-left',
                     next: 'fa-chevron-circle-right',
-                    listWeek: 'fa-list'
+                    listWeek : 'fa-list'
                 },
                 locale: 'tr',
                 header: {
                     left: 'prev, next, today, addEvent',
                     center: 'title',
-                    right: 'dayGridMonth, timeGridWeek, timeGridDay, timeGridForFourDay, listWeek',
+                    right: 'dayGridMonth, timeGridWeek, timeGridDay, timeGridForFourDay, listWeek'
                     //listDay, listWeek, listMonth, listYear
                 },
-
                 footer: {
                     left: 'prevYear',
                     right: 'nextYear'
                 },
-                //scrollTime:'08:00:00',
+                //scrollTime : '08:00:00',
                 minTime: '08:00:00',
                 maxTime: '21:00:00',
                 //slotDuration: '00:15:00',
@@ -89,7 +87,7 @@
                     hour: '2-digit',
                     minute: '2-digit',
                     //omitZeroMinute: true,
-                    //meridiem:'long'
+                    //meridiem : 'long'
                 },
                 fixedWeekCount: true,
                 showNonCurrentDates: false,
@@ -99,7 +97,7 @@
                 //    alert('Takvim yeniden boyutlandırıldı.');
                 //},
                 contentHeight: 650,
-                //aspectRatio: 1.2,
+                //aspectRatio: 5,
                 defaultView: 'dayGridMonth',
                 weekends: true,
                 allDaySlot: false,
@@ -136,54 +134,52 @@
                             var newEvent = {
                                 id: 'a',
                                 title: 'New Event',
-                                start: '2021-02-02T14:00:00.000Z',
-                                end: '2021-02-02T16:30:00.000Z',
+                                start: '2020-04-04T15:00:00.000Z',
+                                end: '2020-04-04T15:30:00.000Z'
                             }
 
                             calendar.addEvent(newEvent);
                         }
                     }
                 },
-                //eventColor: 'red',
+                //eventColor : 'red',
                 //eventBackgroundColor: 'red',
                 //eventBorderColor: 'black',
-                //eventTextColor:'white',
+                //eventTextColor : 'white',
                 eventTimeFormat: {
                     hour: '2-digit',
                     minute: '2-digit',
                     //second: '',
                     //omitZeroMinute: true,
-                    //meridiem:'narrow',
+                    //meridiem : 'narrow'  narrow --> p, a
                 },
                 //displayEventTime: true,
-                //displayEventEnd: false,
-                //eventOrder:'title', // start, -duration, allDay, title, [], function
-                //defaultDate:'2021-05-07',
+                //displayEventEnd : false,
+                // eventOrder : 'title', //start, -duration, allDay, title, [], function
+                //defaultDate : '2020-05-04',
                 //validRange: {
-                //    start:'2020-03-20'
+                //    start : '2020-03-20'
                 //},
-                timeZone: 'UTC',
+                timeZone : 'UTC',
                 events: [
                     {
                         id: 'x',
                         title: 'Merhaba',
-                        start: '2021-02-02T08:00:00.000Z',
-                        end: '2021-02-02T10:30:00.000Z',
-
+                        start: '2020-04-04T08:00:00.000Z',
+                        end: '2020-04-04T10:30:00.000Z'
                     },
                     {
                         id: 'y',
-                        title: 'Merhaba Y',
-                        start: '2021-01-25T11:00:00.000Z',
-                        end: '2021-01-25T12:30:00.000Z',
-
+                        title: 'A Merhaba Y',
+                        start: '2020-04-04T13:00:00.000Z',
+                        end: '2020-04-04T15:30:00.000Z'
                     }
                 ],
                 //eventRender: function (info) {
                 //    console.log(info.event.title); // event, el, isMirror
                 //},
                 selectable: true,
-                droppable:true,
+                droppable : true,
                 select: function (selectionInfo) {
                     console.log(selectionInfo);
                 },
@@ -198,54 +194,60 @@
                 //}
                 editable: true,
                 //eventStartEditable: false,
-                //eventDurationEditable:true
+                //eventDurationEditable : true
                 //eventDragMinDistance: 100,
                 //dragRevertDuration: 3000,
                 //dragScroll: true,
                 snapDuration: '00:15:00',
                 //eventOverlap: function (stillEvent, movingEvent) {
+                //    //süzgeç
                 //    return stillEvent.allDay && movingEvent.allDay;
                 //},
                 //eventConstraint: {
                 //    startTime: '10:00',
                 //    endTime: '19:00',
-                //    daysOfWeek: [1,2,3]
+                //    daysOfWeek : [1,2,3]
                 //},
                 //eventAllow: function (dropInfoEvent, draggedEvent) {
-                //    console.log(dropInfoEvent.start)
+                //    //kontrol
+                //    console.log(dropInfoEvent.start);
                 //    return false;
                 //}
                 eventDragStart: function (info) {
-                    console.log('başladı');
+                    console.log('başladı.');
                 },
-                eventDragStop: function (info) {
-                    console.log('bitti');
+                eventDragStop : function (info) {
+                    console.log('bitti.');
                 },
                 eventDrop: function (eventDropInfo) {
-                    console.log('droped');
+                    console.log('droped.');  //event, oldEvent, revert()
                 },
                 eventResizeStart: function (info) {
-                    console.log('resize başladı');
+                    console.log('Resize başladı.');
                 },
                 eventResizeStop: function (info) {
-                    console.log('resize bitti');
+                    console.log('Resize bitti.');
                 },
                 eventResize: function (eventResizeInfo) {
-                    console.log('resize edildi');
+                    //event, prevEvent, revert()
+                    console.log('Resize edildi.');
+                    //
                     //eventResizeInfo.revert();
                 },
                 drop: function (dropInfo) {
-                    console.log('drop edildi'); // allDay, date, dateStr, draggedEl
+                    console.log('drop edildi.');  //allDay, date, dateStr, draggedEl
                 },
                 eventReceive: function (info) {
-                    console.log('receive tetiklendi.'); // draggedEl, event
+                    console.log('Recieve methodu tetiklendi.');  //draggedEl, event
                 },
                 eventLeave: function (info) {
-                    console.log('leave edildi'); // takvimler arasında olaylar sürüklendiğinde çalışır.
+                    console.log('Leave edildi.');  //Takvimler arasında olaylar sürüklendiğinde çalışır
                 },
-                dropAccept:'#isValid'
+                dropAccept : '#isValid'
 
 
+
+              
             });
 
             calendar.render();
@@ -254,9 +256,10 @@
 
             var id = 'x';
             var event = calendar.getEventById(id);
-            console.log(event.Title);
+            console.log(event.title);
 
             //calendar.renderEvents();
+
         });
     </script>
 }

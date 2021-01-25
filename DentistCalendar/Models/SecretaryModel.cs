@@ -1,14 +1,13 @@
 ﻿using DentistCalendar.Data.Entity;
-using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DentistCalendar.Models
 {
     public class SecretaryModel
     {
-        public AppUser AppUser { get; set; }
-        public List<AppUser> Dentists { get; set; }
+        public AppUser User { get; set; }
+        public IEnumerable<AppUser> Dentists { get; set; }
+        public List<SelectListItem> DentistsSelectList { get; set; }
     }
 }
